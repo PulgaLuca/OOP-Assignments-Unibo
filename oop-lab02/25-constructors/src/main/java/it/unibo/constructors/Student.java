@@ -7,6 +7,15 @@ class Student {
     int id;
     int matriculationYear;
 
+    public Student() {}
+    
+    public Student(final String name, final String surname, int id, int matriculationYear){
+        this.name = name;
+        this.surname = surname;
+        this.id = id;
+        this.matriculationYear = matriculationYear;
+    }
+
     void build(final int id, final String name, final String surname, final int matriculationYear) {
         this.id = id;
         this.name = name;

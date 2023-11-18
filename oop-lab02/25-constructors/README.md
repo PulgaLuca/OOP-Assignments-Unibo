@@ -20,3 +20,7 @@
     - `Smartphone(String brand, String model, boolean hasNFC)`
     - Costruttore con un argomento per campo (NB: ci si assicuri di usare `this` per richiamare i costruttori esistenti)
 2. Si utilizzino i commenti riportati nel `main` della classe per scrivere un test ed eseguirlo.
+
+# TO COMPILE:
+## javac -d .\bin\ -cp "main;java;it;unibo;constructors" .\src\main\java\it\unibo\constructors\*.java
+## java -cp "bin;main;java;it;unibo;constructors" it.unibo.constructors.UseConstructorsEvolved

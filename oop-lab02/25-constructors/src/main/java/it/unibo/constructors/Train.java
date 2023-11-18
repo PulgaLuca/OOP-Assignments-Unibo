@@ -12,6 +12,26 @@ class Train {
     int firstClassReserved;
     int secondClassReserved;
 
+    public Train() {
+        this.seats = DEFAULT_TOT_SEATS;
+        this.firstClassReserved = 10;
+        this.secondClassReserved = 20;
+        this.firstClassSeats = DEFAULT_N_FC_SEATS;
+        this.secondClassSeats = DEFAULT_N_SC_SEATS;
+    }
+
+    public Train(final int firstClassReserved, final int secondClassReserved) {
+        this(DEFAULT_TOT_SEATS, firstClassReserved, secondClassReserved);
+    }
+
+    public Train(final int seats, final int firstClassReserved, final int secondClassReserved) {
+        this.seats = seats;
+        this.firstClassReserved = firstClassReserved;
+        this.secondClassReserved = secondClassReserved;
+        this.firstClassSeats = DEFAULT_N_FC_SEATS;
+        this.secondClassSeats = DEFAULT_N_SC_SEATS;
+    }
+
     void deleteAllReservations() {
         this.firstClassReserved = 0;
         this.secondClassReserved = 0;

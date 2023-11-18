@@ -22,5 +22,14 @@ class TestCommandLine {
          *  * the, 3 characters long
          *  * lab, 3 characters long
          */
+        for (final String arg : args){
+            System.out.println(arg + ", " + arg.length() + " characters long");
+        }
+        /*
+        TERMINAL CMDS:
+        md bin
+        javac -d .\bin\ -cp "it;unibo;cli;arguments;test" .\src\main\java\it\ unibo\cli\arguments\test\TestCommandLine.java
+        java -cp "bin;it;unibo;cli;arguments;test" it.unibo.cli.arguments.test.TestCommandLine ciao mac
+        */
     }
 }

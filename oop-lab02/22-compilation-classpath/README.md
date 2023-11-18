@@ -17,7 +17,7 @@
     - Il separatore di percorsi è `:` su Linux e `;` su Windows
     - Il comando `java -cp bin:../01-packages/bin NOMEDELLACLASSE` (formato Unix, usare `;` come separatore in Windows) istruisce l'interprete Java dicendogli di andare a caricare classi non solo dalla posizione corrente, ma anche dalla cartella `bin`, e dalla cartella `../01-packages/bin`
 
-
-javac -d .\bin\ -cp "compilation;lab;math" ..\21...... .java
-javac -d .\bin\ -cp "bin;compilation;lab;math" .\src\compilation\lab\math\*.java
-java -cp "bin;compilation;lab;math" compilation.lab.math.UseComplex
+# TO CARRY OUT THE EX:
+## javac -d .\bin\ -cp "compilation;lab;math" ..\21...... .java
+## javac -d .\bin\ -cp "bin;compilation;lab;math" .\src\compilation\lab\math\*.java
+## java -cp "bin;compilation;lab;math" compilation.lab.math.UseComplex

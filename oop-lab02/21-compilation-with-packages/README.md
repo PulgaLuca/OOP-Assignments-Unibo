@@ -15,6 +15,6 @@
 9. Si provi ad eseguire la classe usando il comando: `java ComplexNum`
     - Oh-oh... errore. Perché? Eppure il file `ComplexNum.class` è proprio lì. Si provi a comprenderne la ragione e a correggere il comando.
 
-
-javac -d bin -cp "compilation;lab;math" .\src\compilation\lab\math\*.java
-java -cp "bin;compilation;lab;math" compilation.lab.math.ComplexNum
+# TO CARRY OUT THE EX:
+## javac -d bin -cp "compilation;lab;math" .\src\compilation\lab\math\*.java
+## java -cp "bin;compilation;lab;math" compilation.lab.math.ComplexNum

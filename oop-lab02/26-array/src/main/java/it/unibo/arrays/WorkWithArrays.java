@@ -15,27 +15,93 @@ class WorkWithArrays {
     }
 
     static int[] evenElements(final int[] array) {
-        return null;
+        int [] copy_array = array;
+        for (int i = 0; i < array.length; i+=2){
+            copy_array[i/2] = array[i];
+        }
+        return copy_array;
     }
 
     static int[] oddElements(final int[] array) {
-        return null;
+        int [] copy_array = array;
+        for (int i = 1; i < array.length; i+=2){
+            copy_array[i/2] = array[i];
+        }
+        return copy_array;
     }
 
     static int mostRecurringElement(final int[] array) {
-        return 0;
+        int [] defensiveCopy = array.clone();
+        int maxOccurencies = 0;
+        int currMaxOccurrencies = 0;
+        int mostOccurredElement = 0;
+        Arrays.sort(defensiveCopy);
+        for(int i = 0; i < defensiveCopy.length; ++i){
+            currMaxOccurrencies = 0;
+            final int currElem = defensiveCopy[i];
+            for(i++; i < defensiveCopy.length && currElem == defensiveCopy[i]; i++, currMaxOccurrencies++);
+            if (currMaxOccurrencies > maxOccurencies){
+                maxOccurencies = currMaxOccurrencies;
+                mostOccurredElement = currElem;
+            }
+        }
+        return mostOccurredElement;
     }
 
     static int[] sortArray(final int[] array, final boolean isDescending) {
+        boolean swap = true;
+        while (swap) {
+            swap = false;
+            for (int i = 0; i < array.length - 1; i++) {
+                var current = array[i];
+                var next = array[i + 1];
+                // If the array is decending and the next element is smaller
+                // Or if the array is ascending and the next element is greater
+                if ((isDescending && current < next) || (!isDescending && current > next)) {
+                    array[i] = next;
+                    array[i + 1] = current;
+                    swap = true; // We swapped at least once, so we need another round
+                }
+            }
+        }
         return array;
     }
 
     static double computeVariance(final int[] array) {
-        return 0;
+        double returnValue = 0;
+        double mean = 0;
+        for (final int element : array) {
+            mean += element;
+        }
+        mean /= array.length;
+        for (final int element : array) {
+            returnValue += Math.pow(element - mean, 2);
+        }
+        returnValue /= array.length;
+        return returnValue;
+    }
+
+    static protected int searchIndex(final int[] array, final int element){
+        for(int i = 0; i < array.length; i++){
+            if (array[i] == element){
+                return i;
+            }
+        }
+        return -1;
     }
 
     static int[] revertUpTo(final int[] array, final int element) {
-        return null;
+        int index = searchIndex(array, element);
+        final int[] copyArray = array.clone();
+        int tmp;
+        if (index != -1){
+            for(int i = 0; i < index; i++){
+                tmp = copyArray[i];
+                copyArray[i] = copyArray[index - 1];
+                copyArray[index-1] = tmp;
+            }
+        }
+        return copyArray;
     }
 
     static int[] duplicateElements(final int[] array, final int times) {
