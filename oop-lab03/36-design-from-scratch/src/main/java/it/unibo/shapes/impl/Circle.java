@@ -1,6 +1,6 @@
-package main.java.it.unibo.shapes.impl;
+package it.unibo.shapes.impl;
 
-import main.java.it.unibo.shapes.api.Shape;
+import it.unibo.shapes.api.Shape;
 
 public class Circle implements Shape {
     private final double radius;

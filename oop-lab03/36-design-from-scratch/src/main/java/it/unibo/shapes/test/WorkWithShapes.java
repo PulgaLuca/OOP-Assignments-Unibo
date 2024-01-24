@@ -4,8 +4,6 @@ import it.unibo.shapes.impl.Rectangle;
 import it.unibo.shapes.impl.SimpleTriangle;
 import it.unibo.shapes.impl.Square;
 import it.unibo.shapes.impl.Triangle;
-import main.java.it.unibo.shapes.api.*;
-import main.java.it.unibo.shapes.impl.*;
 
 public class WorkWithShapes {
 

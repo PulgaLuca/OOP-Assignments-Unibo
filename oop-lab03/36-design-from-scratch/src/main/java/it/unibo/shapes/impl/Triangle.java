@@ -1,6 +1,6 @@
 package it.unibo.shapes.impl;
 
-import main.java.it.unibo.shapes.api.Polygon;
+import it.unibo.shapes.api.Polygon;
 
 public class Triangle implements Polygon{
 
